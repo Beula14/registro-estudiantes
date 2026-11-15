@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Estudiantes</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Sistema de Estudiantes</h1>
+    <nav>
+      <a href="index.html" class="activo">Registro</a>
+      <a href="consulta.html">Consulta</a>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="tarjeta">
+      <h2>Formulario de registro de estudiantes</h2>
+      <p class="sub">Todos los campos son obligatorios.</p>
+
+      <form id="formRegistro" novalidate>
+        <div class="grid">
+          <div class="campo">
+            <label for="carne">Carné</label>
+            <input type="text" id="carne" name="carne" placeholder="Ej. 0901202301" autocomplete="off">
+            <small class="error" data-error="carne"></small>
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+            <small class="error" data-error="correo"></small>
+          </div>
+
+          <div class="campo">
+            <label for="nombres">Nombres</label>
+            <input type="text" id="nombres" name="nombres" placeholder="Ej. Juan Carlos">
+            <small class="error" data-error="nombres"></small>
+          </div>
+
+          <div class="campo">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Pérez López">
+            <small class="error" data-error="apellidos"></small>
+          </div>
+
+          <div class="campo">
+            <label for="carrera">Carrera</label>
+            <select id="carrera" name="carrera">
+              <option value="">-- Seleccione una carrera --</option>
+              <option>Ingeniería en Sistemas</option>
+              <option>Ingeniería Industrial</option>
+              <option>Administración de Empresas</option>
+              <option>Contaduría Pública</option>
+              <option>Psicología</option>
+              <option>Ingeniería Civil</option>
+            </select>
+            <small class="error" data-error="carrera"></small>
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="####-####" maxlength="9">
+            <small class="error" data-error="telefono"></small>
+          </div>
+
+          <div class="campo">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            <small class="error" data-error="fechaNacimiento"></small>
+          </div>
+
+          <div class="campo">
+            <span class="label">Género</span>
+            <div class="radios">
+              <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+              <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+              <label><input type="radio" name="genero" value="Otro"> Otro</label>
+            </div>
+            <small class="error" data-error="genero"></small>
+          </div>
+        </div>
+
+        <div class="captcha">
+          <div id="recaptcha"></div>
+          <small class="error" data-error="captcha"></small>
+        </div>
+
+        <div class="acciones">
+          <button type="reset" class="btn sec" id="btnLimpiar">Limpiar</button>
+          <button type="submit" class="btn" id="btnEnviar" disabled>Registrar estudiante</button>
+        </div>
+      </form>
+
+      <div id="mensaje" class="mensaje" hidden></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/registro.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit&hl=es" async defer></script>
+</body>
+</html>
