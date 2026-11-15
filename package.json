@@ -1,1 +1,20 @@
-{"name":"registro-estudiantes","version":"1.0.0","description":"Examen Parcial - Registro de estudiantes con Web Service POST en la nube, consulta y reCAPTCHA","main":"server.js","scripts":{"start":"node server.js","dev":"node --watch server.js"},"engines":{"node":">=18"},"dependencies":{"cors":"^2.8.5","dotenv":"^16.4.5","express":"^4.21.2","mongoose":"^8.9.5","pg":"^8.23.1"}}
+{
+  "name": "registro-estudiantes",
+  "version": "1.0.0",
+  "description": "Examen Parcial - Registro de estudiantes con Web Service POST en la nube, consulta y reCAPTCHA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "pg": "^8.23.1"
+  }
+}
